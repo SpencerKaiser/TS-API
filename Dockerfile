@@ -2,7 +2,8 @@ FROM node:18
 WORKDIR /usr/src/app
 
 COPY yarn.lock package.json ./
-COPY patches ./patches
+# Uncomment if packages need patches via patch-package
+# COPY patches ./patches
 COPY packages/shared/package.json packages/shared/package.json
 COPY packages/api/package.json packages/api/package.json
 COPY packages/web/package.json packages/web/package.json
@@ -23,7 +24,5 @@ RUN yarn install --frozen-lockfile
 
 # TODO: Remove src files
 
-RUN chmod +x ./entrypoint.sh
-
 EXPOSE 8080
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "yarn", "start" ]

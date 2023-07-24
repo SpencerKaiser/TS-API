@@ -27,8 +27,8 @@
     "reset": "yarn clean",
     "postreset": "rimraf **/node_modules",
     "postinstall": "patch-package",
-    "docker:build": "docker build . --tag PACKAGE",
-    "docker:run": "docker rm -f PACKAGE && docker run -p 3001:8080 --env-file packages/api/.env.local --env-file .env.docker --name PACKAGE PACKAGE",
+    "docker:build": "docker build . --tag delete-me",
+    "docker:run": "docker rm -f delete-me && docker run -p 3001:8080 --env-file packages/api/.env.local --env-file .env.docker --name delete-me delete-me",
     "spellcheck": "yarn cspell --no-progress ."
   },
   "dependencies": {
