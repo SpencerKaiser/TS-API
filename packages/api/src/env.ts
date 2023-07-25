@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import { config } from 'dotenv-flow';
 import setEnv from '@americanairlines/simple-env';
 

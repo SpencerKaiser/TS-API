@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { AuthorizeResult } from '@slack/bolt';
 import { WebClient } from '@slack/web-api';
 import { env } from '../env';

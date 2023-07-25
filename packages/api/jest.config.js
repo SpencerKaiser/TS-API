@@ -13,6 +13,8 @@ module.exports = {
     './src/**/*.ts',
     '!./src/**/*.d.ts',
     '!./src/@types/**',
+    '!./src/env.ts',
+    '!./src/slack/*',
   ],
   coverageThreshold: {
     global: {

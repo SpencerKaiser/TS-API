@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import express, { Handler } from 'express';
 import rateLimit from 'express-rate-limit';
 

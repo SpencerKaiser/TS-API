@@ -1,6 +1,6 @@
-import { Handler } from 'express';
+import { Request, Response } from 'express';
 
-export const get: Handler = async (req, res) => {
+export const get = async (req: Request, res: Response) => {
   const db = await req.entityManager.getConnection().isConnected();
 
   const dependencies: { [id: string]: boolean } = { db };
