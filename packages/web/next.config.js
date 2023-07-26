@@ -5,27 +5,4 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: '/@:handle',
-        destination: '/hosts/:handle',
-      },
-    ];
-  },
-
-  async redirects() {
-    return [
-      {
-        source: '/customurl',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/@customurl',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
 };

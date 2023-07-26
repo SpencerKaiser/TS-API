@@ -1,13 +1,13 @@
 import { Middleware, SlackEventMiddlewareArgs } from '@slack/bolt';
+import { logger } from '../../../../utils/logger';
 
 export const appHomeOpened: Middleware<SlackEventMiddlewareArgs<'app_home_opened'>> = async ({
   event,
   client,
-  logger,
 }) => {
   try {
     // Call views.publish with the built-in client
-    const result = await client.views.publish({
+    await client.views.publish({
       // Use the user ID associated with the event
       user_id: event.user,
       view: {
@@ -31,8 +31,6 @@ export const appHomeOpened: Middleware<SlackEventMiddlewareArgs<'app_home_opened
         ],
       },
     });
-
-    logger.info(result);
   } catch (error) {
     logger.error(error);
   }

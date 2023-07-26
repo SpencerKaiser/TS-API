@@ -15,7 +15,7 @@ Finally, delete this section from the README and run `yarn` to properly link dep
 
 ### Prerequisites
 
-- Node 14
+- Node 18+
 - [Yarn v1](https://classic.yarnpkg.com/lang/en/)
 
   > _This project is a monorepo, so Yarn was chosen for better dependency management_
@@ -67,7 +67,7 @@ Finally, delete this section from the README and run `yarn` to properly link dep
 
     #### Database migrations
 
-    See [migrations.md](docs/db/migrations.md)
+    To run migrations locally, use `yarn migrate` from the root. If you ever want to replace your db contents with a fresh setup, run `yarn db:fresh`.
 
     #### Updating Mikro-ORM
 
@@ -165,6 +165,12 @@ Finally, delete this section from the README and run `yarn` to properly link dep
     ```
 
     > The server starts before Next.js finishes compiling, so the first time may take a little bit to load
+
+1.  After your initial setup, you'll need to run your database migrations:
+
+    ```
+    yarn migrate
+    ```
 
 1.  Start developing
 

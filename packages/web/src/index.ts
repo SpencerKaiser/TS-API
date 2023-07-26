@@ -1,6 +1,4 @@
 /* istanbul ignore file */
-
-// THIS FILE IS ONLY USED WHEN RUNNING THE WEB PACKAGE INDEPENDENTLY
 import path from 'path';
 import type { Handler } from 'express';
 import next from 'next';
